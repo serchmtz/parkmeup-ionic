@@ -6,10 +6,7 @@ import {PublicGuard} from './guards/public.guard';
 const routes: Routes = [
     {path: '', redirectTo: 'auth', pathMatch: 'full'},
     {path: 'auth', loadChildren: () => import('./pages/auth/auth.module').then(m => m.AuthPageModule), canActivate: [AuthenticatedGuard]},
-    {path: 'public', loadChildren: () => import('./pages/public/public.module').then(m => m.PublicPageModule), canActivate: [PublicGuard]},  {
-    path: 'form-new-company',
-    loadChildren: () => import('./pages/form-new-company/form-new-company.module').then( m => m.FormNewCompanyPageModule)
-  }
+    {path: 'public', loadChildren: () => import('./pages/public/public.module').then(m => m.PublicPageModule), canActivate: [PublicGuard]}
 
 ];
 
