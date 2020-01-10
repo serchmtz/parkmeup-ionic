@@ -8,7 +8,8 @@ const routes: Routes = [
         path: '',
         component: AuthPage,
         children: [
-
+            {path: '', redirectTo: 'companies', pathMatch: 'full'},
+            {path: 'companies', loadChildren: () => import('../companies/companies.module').then(m => m.CompaniesPageModule)},
         ]
     }
 ];
