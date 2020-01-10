@@ -13,6 +13,10 @@ const routes: Routes = [
              .then(m => m.CompaniesPageModule)},
             {path: 'dashboard', loadChildren: () => import('../dashboard/dashboard.module')
              .then( m => m.DashboardPageModule)},
+            {
+                path: 'form-new-company',
+                loadChildren: () => import('../form-new-company/form-new-company.module').then( m => m.FormNewCompanyPageModule)
+            }
         ]
     }
 ];

@@ -1,14 +1,35 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>¡Bienvenido!</ion-title>
-    <ion-buttons slot="end">
-      <ion-button (click)="logOut()">
-        <ion-icon slot="icon-only" name="exit"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+<ion-app>
+  <ion-menu side="start" main>
+    <ion-header>
+      <ion-toolbar translucent>
+        <ion-title>Menú</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item>
+          <ion-icon name="person" slot="start"></ion-icon>
+          <ion-label>{{User}}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+    <section class="full-width">
+      <ion-button expand="full" color="primary" (click)="logOut()">SALIR</ion-button>
+    </section>
+  </ion-menu>
 
-<ion-content>
-  <ion-router-outlet></ion-router-outlet>
-</ion-content>
+  <div class="ion-page" main>
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>¡Bienvenido!</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-router-outlet></ion-router-outlet>
+    </ion-content>
+  </div>
+</ion-app>
+

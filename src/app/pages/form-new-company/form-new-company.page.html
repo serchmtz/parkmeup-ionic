@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Formulario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <form (ngSubmit)="processForm()">
+    <ion-list lines="full" class="ion-no-margin ion-no-padding">
+      <ion-item>
+        <ion-label position="stacked">Nombre<ion-text color="danger">*</ion-text></ion-label>
+        <ion-input required type="text" oninput="getName()"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Dirección<ion-text color="danger">*</ion-text></ion-label>
+        <ion-input required type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Teléfono</ion-label>
+        <ion-input required type="text"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <div class="ion-padding">
+      <ion-button expand="block" type="submit" class="ion-no-margin">Agregar empresa</ion-button>
+    </div>
+  </form>
+</ion-content>

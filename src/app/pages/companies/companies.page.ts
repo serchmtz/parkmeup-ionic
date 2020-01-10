@@ -19,7 +19,7 @@ export class CompaniesPage implements OnInit {
     }
     onCreateCompany() {
         //FIXME: agregar ruta correcta
-        this.router.navigate(['']);
+        this.router.navigate(['/auth/form-new-company']);
     }
     onCompanyClicked() {
         this.router.navigate(['/auth/dashboard']);

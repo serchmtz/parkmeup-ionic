@@ -8,12 +8,17 @@ import {Router} from '@angular/router';
     styleUrls: ['./auth.page.scss'],
 })
 export class AuthPage implements OnInit {
+    User;
 
     constructor(private router: Router,
                 private authenticationService: AuthenticationService) {
     }
 
     ngOnInit() {
+        this.authenticationService.getCurrentUser().then(user=> {
+            this.User = user;
+            this.User = this.User.name;
+        });
     }
 
     logOut() {
