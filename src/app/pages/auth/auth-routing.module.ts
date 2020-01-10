@@ -9,7 +9,10 @@ const routes: Routes = [
         component: AuthPage,
         children: [
             {path: '', redirectTo: 'companies', pathMatch: 'full'},
-            {path: 'companies', loadChildren: () => import('../companies/companies.module').then(m => m.CompaniesPageModule)},
+            {path: 'companies', loadChildren: () => import('../companies/companies.module')
+             .then(m => m.CompaniesPageModule)},
+            {path: 'dashboard', loadChildren: () => import('../dashboard/dashboard.module')
+             .then( m => m.DashboardPageModule)},
         ]
     }
 ];

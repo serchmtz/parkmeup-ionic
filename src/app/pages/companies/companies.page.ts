@@ -21,6 +21,9 @@ export class CompaniesPage implements OnInit {
         //FIXME: agregar ruta correcta
         this.router.navigate(['']);
     }
+    onCompanyClicked() {
+        this.router.navigate(['/auth/dashboard']);
+    }
 
 
 }
